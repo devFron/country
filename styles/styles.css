@@ -331,3 +331,11 @@ form .search::-ms-input-placeholder {
 form .search::placeholder {
   font-weight: 300;
 }
+form select {
+  outline: none;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 20px rgba(209, 209, 209, 0.933);
+          box-shadow: 0 0 20px rgba(209, 209, 209, 0.933);
+}
