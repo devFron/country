@@ -9,4 +9,9 @@ document.addEventListener('DOMContentLoaded',(e)=>{
     $root.appendChild(Form())
     $root.appendChild($countries)
     GetAll()
+    const $form = $root.querySelector('#form')
+    document.addEventListener('submit',(e)=>{
+        if(e.target === $form)e.preventDefault()
+    })
+    
 })
