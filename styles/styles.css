@@ -360,3 +360,10 @@ form select {
 .countries .country .country__data {
   padding: 0 0 0 1rem;
 }
+.countries .country .country__data__country-name {
+  font-size: 17px;
+  font-weight: 800;
+}
+.countries .country .country__data__title {
+  font-weight: 800;
+}
