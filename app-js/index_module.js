@@ -23,5 +23,15 @@ document.addEventListener('DOMContentLoaded',(e)=>{
             GetAll(`https://restcountries.eu/rest/v2/name/${nameOfCountry}`)
         }
     })
-    
+    let select = document.querySelector('#select-region')
+    document.addEventListener('change',(e)=>{
+        if(e.target === select){
+            console.log(select.value);
+            if(e.target.value === 'Filter by Region'){
+                return
+            }else{
+                GetAll(`https://restcountries.eu/rest/v2/region/${e.target.value.toLowerCase()}`)
+            }
+        }
+    })
 })
