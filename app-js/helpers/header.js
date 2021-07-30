@@ -10,4 +10,7 @@ export const header = ()=>{
     $darkModeBox.classList.add('dark-mode')
     $darkModeIcon.classList.add('fas','fa-moon','dark-mode__icon')
     $darkModeTitle.classList.add('dark-mode__title')
+
+    $title.textContent = 'Where in the world'
+    $darkModeTitle.textContent = 'Dark Mode'
 }
