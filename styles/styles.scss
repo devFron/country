@@ -5,3 +5,10 @@ body{
     font-family: 'Nunito Sans', sans-serif;
     background:$color-six;
 }
+header{
+    background:white;
+    display:flex;
+    padding:1rem 10px;
+    justify-content: space-between;
+    box-shadow:0 3px 10px  #eeee ;
+}
