@@ -24,4 +24,17 @@ export const Form =()=>{
     $select.name = 'select'
     $select.id = 'select-region'
 
+    continentsOfTheWorld.forEach(el => {
+        const $option = document.createElement('option')
+        $option.value = el
+        $option.textContent = el
+        $select.appendChild($option)
+    });
+    $SearchBox.appendChild($searchIcon)
+    $SearchBox.appendChild($searchInput)
+    $form.appendChild($SearchBox)
+    $form.appendChild($select)
+    $Fragment.appendChild($form)
+    
+    return $Fragment
 }
