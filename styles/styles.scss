@@ -11,4 +11,9 @@ header{
     padding:1rem 10px;
     justify-content: space-between;
     box-shadow:0 3px 10px  #eeee ;
+    .header__title{
+        font-weight: 800;
+        color:$color-three;
+        font-size:14px;
+    }
 }

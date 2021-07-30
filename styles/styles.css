@@ -252,3 +252,8 @@ header {
   -webkit-box-shadow: 0 3px 10px #eeee;
           box-shadow: 0 3px 10px #eeee;
 }
+header .header__title {
+  font-weight: 800;
+  color: #111517;
+  font-size: 14px;
+}
