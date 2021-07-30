@@ -346,3 +346,10 @@ form select {
   grid-gap: 2rem;
   padding: 0 1rem;
 }
+.countries .country {
+  -webkit-box-shadow: 0 0 20px rgba(209, 209, 209, 0.933);
+          box-shadow: 0 0 20px rgba(209, 209, 209, 0.933);
+  background: white;
+  border-radius: 10px;
+  color: #111517;
+}
