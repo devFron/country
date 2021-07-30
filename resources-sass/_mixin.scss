@@ -1,0 +1,43 @@
+@mixin dark-mode {
+    .body__dark{
+        background:$color-two;
+    }
+    .header__dark{
+        background: $color-one;
+        color:$color-six;
+        box-shadow:0 3px 10px  rgba(32, 32, 32, 0.973) ;
+        .header__title__dark{
+            color:$color-six;
+        }
+    }
+    .form__dark{
+        .search-box__dark{
+            box-shadow: 0 0 20px rgba(32, 32, 32, 0.973);
+            color:$color-six;
+            background: $color-one;
+            &::placeholder{
+                color:$color-six;
+            }
+        }
+        .search__dark{
+            background: $color-one;
+            color:$color-six;
+            &::placeholder{
+                background: transparent;
+                color:$color-six;
+            }
+        }
+        & select{
+            color:$color-six;
+            background: $color-one;
+            box-shadow: 0 0 20px rgba(32, 32, 32, 0.973);
+        }
+    }
+    .countries__dark{
+        .country__dark{
+            background: $color-one;
+            box-shadow: 0 0 20px rgba(32, 32, 32, 0.973);
+            color:$color-six;
+        }
+    }
+}
