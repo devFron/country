@@ -353,3 +353,10 @@ form select {
   border-radius: 10px;
   color: #111517;
 }
+.countries .country .country__image {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+.countries .country .country__data {
+  padding: 0 0 0 1rem;
+}

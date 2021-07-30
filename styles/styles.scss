@@ -74,5 +74,12 @@ form{
         background: white;
         border-radius: 10px;
         color:$color-three;
+        .country__image{
+            width: 100%;
+            border-radius: 10px 10px 0 0 ;
+        }
+        .country__data{
+            padding:0 0 0 1rem;
+        }
     }
 }
