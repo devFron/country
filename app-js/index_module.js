@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded',(e)=>{
             if(expreg.test(nameOfCountry)){
                 alert('please enter a valid country')
             }
+            GetAll(`https://restcountries.eu/rest/v2/name/${nameOfCountry}`)
         }
     })
     
