@@ -45,4 +45,16 @@ form{
         color:$color-four;
         border-radius:5px;
     }
+    .search__icon{
+        cursor: pointer;
+    }
+    .search{
+        border:none;
+        outline: none;
+        padding:0 0 0 1rem;
+        color:$color-four;
+        &::placeholder{
+            font-weight: 300;
+        }
+    }
 }

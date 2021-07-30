@@ -307,3 +307,27 @@ form .search-box {
   color: #858585;
   border-radius: 5px;
 }
+form .search__icon {
+  cursor: pointer;
+}
+form .search {
+  border: none;
+  outline: none;
+  padding: 0 0 0 1rem;
+  color: #858585;
+}
+form .search::-webkit-input-placeholder {
+  font-weight: 300;
+}
+form .search::-moz-placeholder {
+  font-weight: 300;
+}
+form .search:-ms-input-placeholder {
+  font-weight: 300;
+}
+form .search::-ms-input-placeholder {
+  font-weight: 300;
+}
+form .search::placeholder {
+  font-weight: 300;
+}
