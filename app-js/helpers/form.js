@@ -4,7 +4,14 @@ export const Form =()=>{
     const $searchIcon = document.createElement('i')
     const $searchInput = document.createElement('input')
     const $select = document.createElement('select')
-
+    const continentsOfTheWorld = [
+        'Filter by Region',
+        'Africa',
+        'America',
+        'Asia',
+        'Europe',
+        'Oceania'
+    ]
     $form.id = 'form'
     $SearchBox.classList.add('search-box')
     $searchIcon.classList.add('fas','fa-search','search__icon')
