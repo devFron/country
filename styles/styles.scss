@@ -65,3 +65,8 @@ form{
         box-shadow: 0 0 20px rgba(209, 209, 209, 0.933);
     }
 }
+.countries{
+    display:grid;
+    grid-gap: 2rem;   
+    padding:0 1rem; 
+}
