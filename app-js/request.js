@@ -6,6 +6,16 @@ export const GetAll = async(url)=>{
             status:res.status,
             message_status:res.statusText
         }    
+        let json = await res.json()
+        json.forEach(el=> {
+            Countries({
+                image:el.flag,
+                name:el.name,
+                population:el.population,
+                region:el.region,
+                capital:el.capital                
+            })
+        });
     } catch (err) {
         console.log(err.status);
         if(err.status === 404){
