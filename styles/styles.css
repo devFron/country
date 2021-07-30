@@ -234,3 +234,8 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  background: white;
+}
