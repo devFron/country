@@ -4,6 +4,7 @@ export const Form =()=>{
     const $searchIcon = document.createElement('i')
     const $searchInput = document.createElement('input')
     const $select = document.createElement('select')
+    const $Fragment = document.createDocumentFragment()
     const continentsOfTheWorld = [
         'Filter by Region',
         'Africa',
