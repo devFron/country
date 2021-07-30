@@ -13,4 +13,12 @@ export const header = ()=>{
 
     $title.textContent = 'Where in the world'
     $darkModeTitle.textContent = 'Dark Mode'
+
+    $darkModeBox.appendChild($darkModeIcon)
+    $darkModeBox.appendChild($darkModeTitle)
+    $header.appendChild($title)
+    $header.appendChild($darkModeBox)
+    $Fragment.appendChild($header)
+
+    return $Fragment
 }
