@@ -13,5 +13,14 @@ document.addEventListener('DOMContentLoaded',(e)=>{
     document.addEventListener('submit',(e)=>{
         if(e.target === $form)e.preventDefault()
     })
+    document.addEventListener('click',(e) =>{
+        if(e.target.matches('.search__icon')){
+            let nameOfCountry = $form.search.value.toLowerCase()
+            let expreg = /^[0-9]+$/;
+            if(expreg.test(nameOfCountry)){
+                alert('please enter a valid country')
+            }
+        }
+    })
     
 })
