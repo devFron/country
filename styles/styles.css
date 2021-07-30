@@ -387,3 +387,76 @@ form select {
   border-radius: 100%;
   cursor: pointer;
 }
+
+.body__dark {
+  background: #202c37;
+}
+
+.header__dark {
+  background: #2b3945;
+  color: white;
+  -webkit-box-shadow: 0 3px 10px rgba(32, 32, 32, 0.973);
+          box-shadow: 0 3px 10px rgba(32, 32, 32, 0.973);
+}
+.header__dark .header__title__dark {
+  color: white;
+}
+
+.form__dark .search-box__dark {
+  -webkit-box-shadow: 0 0 20px rgba(32, 32, 32, 0.973);
+          box-shadow: 0 0 20px rgba(32, 32, 32, 0.973);
+  color: white;
+  background: #2b3945;
+}
+.form__dark .search-box__dark::-webkit-input-placeholder {
+  color: white;
+}
+.form__dark .search-box__dark::-moz-placeholder {
+  color: white;
+}
+.form__dark .search-box__dark:-ms-input-placeholder {
+  color: white;
+}
+.form__dark .search-box__dark::-ms-input-placeholder {
+  color: white;
+}
+.form__dark .search-box__dark::placeholder {
+  color: white;
+}
+.form__dark .search__dark {
+  background: #2b3945;
+  color: white;
+}
+.form__dark .search__dark::-webkit-input-placeholder {
+  background: transparent;
+  color: white;
+}
+.form__dark .search__dark::-moz-placeholder {
+  background: transparent;
+  color: white;
+}
+.form__dark .search__dark:-ms-input-placeholder {
+  background: transparent;
+  color: white;
+}
+.form__dark .search__dark::-ms-input-placeholder {
+  background: transparent;
+  color: white;
+}
+.form__dark .search__dark::placeholder {
+  background: transparent;
+  color: white;
+}
+.form__dark select {
+  color: white;
+  background: #2b3945;
+  -webkit-box-shadow: 0 0 20px rgba(32, 32, 32, 0.973);
+          box-shadow: 0 0 20px rgba(32, 32, 32, 0.973);
+}
+
+.countries__dark .country__dark {
+  background: #2b3945;
+  -webkit-box-shadow: 0 0 20px rgba(32, 32, 32, 0.973);
+          box-shadow: 0 0 20px rgba(32, 32, 32, 0.973);
+  color: white;
+}
