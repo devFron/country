@@ -1,41 +1,72 @@
-export const GetAll = async(url)=>{
-    try {
-        const $countriesBox = document.querySelector('.countries')
-        $countriesBox.innerHTML= `
-            <img src="assets/ball-triangle.svg" alt="loader image" class="loader">
-        `
-        let res = await fetch(url || 'https://restcountries.eu/rest/v2/all') 
-        if(!res.ok)throw {
-            status:res.status,
-            message_status:res.statusText
-        }    
-        let json = await res.json()
-        json.forEach(el=> {
+export const GetAll = async(filterData)=>{
+    let{url,filter} = filterData
+    const $countriesBox = document.querySelector('.countries')
+    $countriesBox.innerHTML=``
+    const InsertCountries = countries =>{
+        countries.forEach(el=> {
             $countriesBox.innerHTML +=`
-            <section class="country">
-                <img class="country__image" src="${el.flag}">
-                <article class="country__data">
-                    <p class="country__data__country-name">${el.name}</p>
-                    <p class="country__data__country-population">
-                        <span class="country__data__title">Population:</span>
-                        <span class="country__data__description">${el.population}</span>
-                    </p>
-                    <p class="country__data__country-region">
-                        <span class="country__data__title">Region:</span>
-                        <span class="country__data__description">${el.region}</span>
-                    </p>
-                    <p class="country__data__country-capital">
-                        <span class="country__data__title">Capital:</span>
-                        <span class="country__data__description">${el.capital}</span>
-                    </p>
-                </article>
-            </section>
+                <section class="country">
+                    <img class="country__image" src="${el.flag}">
+                    <article class="country__data">
+                        <p class="country__data__country-name">${el.name}</p>
+                        <p class="country__data__country-population">
+                            <span class="country__data__title">Population:</span>
+                            <span class="country__data__description">${el.population}</span>
+                        </p>
+                        <p class="country__data__country-region">
+                            <span class="country__data__title">Region:</span>
+                            <span class="country__data__description">${el.region}</span>
+                        </p>
+                        <p class="country__data__country-capital">
+                            <span class="country__data__title">Capital:</span>
+                            <span class="country__data__description">${el.capital}</span>
+                        </p>
+                    </article>
+                </section>
             `
-            
         });
-        document.querySelector('.loader').style.display = 'none'
+    }     
+
+    try {
+        let res =await fetch(url || 'https://restcountries.eu/rest/v2/all')
+        if(!res.ok)throw {status:res.status,message_status:res.statusText}
+        let json = await res.json()
+        if(filter){
+            InsertCountries(json)
+        }else{
+            let i = 1
+
+            function nose(i) {
+                let Alphabet = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','Y','Z']
+                let CountriessegunTheAlphabet = json.filter((x)=>{
+                    if(x.name.includes(Alphabet[i]) && x.name.search(Alphabet[i]) === 0){
+                        console.log(x);
+                        return x 
+                    }else{
+                        return false
+                    }
+                })  
+                InsertCountries(CountriessegunTheAlphabet)
+            }
+            nose()
+            if(i === 1){
+                nose(0)
+            }
+            window.addEventListener('scroll',(e)=>{
+                let {scrollTop,clientHeight,scrollHeight} = document.documentElement
+                if(scrollTop+clientHeight >= scrollHeight){
+                    if(i > 25){
+                        return
+                    }else{
+                        nose(i)
+                        i++
+                    }
+                }
+            })
+        }
+
+
     } catch (err) {
-        console.log(err.status);
         if(err.status === 404){
             alert(`I'm sorry, an error occurred when recovering the countries `)        
         }else{
