@@ -26,8 +26,7 @@ document.addEventListener('DOMContentLoaded',(e)=>{
     let select = document.querySelector('#select-region')
     document.addEventListener('change',(e)=>{
         if(e.target === select){
-            console.log(select.value);
-            if(e.target.value === 'Filter by Region'){
+            if(e.target.value === 'Filter by Region'|| e.target.value === 'America'){
                 return
             }else{
                 GetAll(`https://restcountries.eu/rest/v2/region/${e.target.value.toLowerCase()}`)
