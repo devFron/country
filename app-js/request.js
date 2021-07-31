@@ -7,23 +7,25 @@ export const GetAll = async(filterData)=>{
     const InsertCountries = countries =>{
         countries.forEach(el=> {
             $countriesBox.innerHTML +=`
-                <section class="country">
-                    <img class="country__image" src="${el.flag}">
-                    <article class="country__data">
-                        <p class="country__data__country-name">${el.name}</p>
-                        <p class="country__data__country-population">
-                            <span class="country__data__title">Population:</span>
-                            <span class="country__data__description">${el.population}</span>
-                        </p>
-                        <p class="country__data__country-region">
-                            <span class="country__data__title">Region:</span>
-                            <span class="country__data__description">${el.region}</span>
-                        </p>
-                        <p class="country__data__country-capital">
-                            <span class="country__data__title">Capital:</span>
-                            <span class="country__data__description">${el.capital}</span>
-                        </p>
-                    </article>
+                <section class="country-box" data-name="${el.name}">
+                    <section class="country">
+                        <img class="country__image" src="${el.flag}">
+                        <article class="country__data">
+                            <p class="country__data__country-name">${el.name}</p>
+                            <p class="country__data__country-population">
+                                <span class="country__data__title">Population:</span>
+                                <span class="country__data__description">${el.population}</span>
+                            </p>
+                            <p class="country__data__country-region">
+                                <span class="country__data__title">Region:</span>
+                                <span class="country__data__description">${el.region}</span>
+                            </p>
+                            <p class="country__data__country-capital">
+                                <span class="country__data__title">Capital:</span>
+                                <span class="country__data__description">${el.capital}</span>
+                            </p>
+                        </article>
+                    </section>
                 </section>
             `
         });
