@@ -1,7 +1,9 @@
 export const GetAll = async(url)=>{
     try {
         const $countriesBox = document.querySelector('.countries')
-        $countriesBox.innerHTML= ''
+        $countriesBox.innerHTML= `
+            <img src="assets/ball-triangle.svg" alt="loader image" class="loader">
+        `
         let res = await fetch(url || 'https://restcountries.eu/rest/v2/all') 
         if(!res.ok)throw {
             status:res.status,
@@ -31,6 +33,7 @@ export const GetAll = async(url)=>{
             `
             
         });
+        document.querySelector('.loader').style.display = 'none'
     } catch (err) {
         console.log(err.status);
         if(err.status === 404){
