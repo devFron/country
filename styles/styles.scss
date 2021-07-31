@@ -69,7 +69,17 @@ form{
     display:grid;
     grid-gap: 2rem;   
     padding:0 1rem; 
+    .country-box{
+        cursor: pointer;
+        background:transparent;
+        position: absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+    }
     .country{
+        position: relative;
         box-shadow: 0 0 20px rgba(209, 209, 209, 0.933);
         background: white;
         border-radius: 10px;
