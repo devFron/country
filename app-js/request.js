@@ -1,7 +1,9 @@
 export const GetAll = async(filterData)=>{
     let{url,filter} = filterData
+
     const $countriesBox = document.querySelector('.countries')
     $countriesBox.innerHTML=``
+
     const InsertCountries = countries =>{
         countries.forEach(el=> {
             $countriesBox.innerHTML +=`
@@ -27,20 +29,21 @@ export const GetAll = async(filterData)=>{
         });
     }     
 
+    localStorage.setItem('filterKey',filter)
+
     try {
         let res =await fetch(url || 'https://restcountries.eu/rest/v2/all')
         if(!res.ok)throw {status:res.status,message_status:res.statusText}
         let json = await res.json()
-        if(filter){
+
+        if(localStorage.getItem('filterKey')=== 'true'){
             InsertCountries(json)
         }else{
             let i = 1
-
             function nose(i) {
                 let Alphabet = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','Y','Z']
                 let CountriessegunTheAlphabet = json.filter((x)=>{
                     if(x.name.includes(Alphabet[i]) && x.name.search(Alphabet[i]) === 0){
-                        console.log(x);
                         return x 
                     }else{
                         return false
@@ -48,23 +51,23 @@ export const GetAll = async(filterData)=>{
                 })  
                 InsertCountries(CountriessegunTheAlphabet)
             }
-            nose()
             if(i === 1){
                 nose(0)
             }
             window.addEventListener('scroll',(e)=>{
-                let {scrollTop,clientHeight,scrollHeight} = document.documentElement
-                if(scrollTop+clientHeight >= scrollHeight){
-                    if(i > 25){
-                        return
-                    }else{
-                        nose(i)
-                        i++
+                if(localStorage.getItem('filterKey')=== 'false'){
+                    let {scrollTop,clientHeight,scrollHeight} = document.documentElement
+                    if(scrollTop+clientHeight >= scrollHeight){
+                        if(i > 25){
+                            return
+                        }else{
+                            nose(i)
+                            i++
+                        }
                     }
                 }
             })
         }
-
 
     } catch (err) {
         if(err.status === 404){
@@ -73,4 +76,5 @@ export const GetAll = async(filterData)=>{
             alert(`I'm sorry, something unexpected happened Error ${err.status} ${err.message_status}`)        
         }
     }
+
 }
