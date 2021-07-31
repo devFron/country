@@ -40,7 +40,7 @@ export const GetAll = async(filterData)=>{
             InsertCountries(json)
         }else{
             let i = 1
-            function nose(i) {
+            const CounterFilter = i => {
                 let Alphabet = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','Y','Z']
                 let CountriessegunTheAlphabet = json.filter((x)=>{
                     if(x.name.includes(Alphabet[i]) && x.name.search(Alphabet[i]) === 0){
@@ -52,7 +52,7 @@ export const GetAll = async(filterData)=>{
                 InsertCountries(CountriessegunTheAlphabet)
             }
             if(i === 1){
-                nose(0)
+                CounterFilter(0)
             }
             window.addEventListener('scroll',(e)=>{
                 if(localStorage.getItem('filterKey')=== 'false'){
@@ -61,7 +61,7 @@ export const GetAll = async(filterData)=>{
                         if(i > 25){
                             return
                         }else{
-                            nose(i)
+                            CounterFilter(i)
                             i++
                         }
                     }
