@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded',(e)=>{
     $root.appendChild($countries)
     $root.appendChild($upButton)
     GetAll({
-        filter:false
+        filter:'false'
     })
 })
 
@@ -32,7 +32,7 @@ document.addEventListener('click',(e) =>{
 
         GetAll({
             url:`https://restcountries.eu/rest/v2/name/${nameOfCountry}`,
-            filter:true
+            filter:'true'
         })
     }
 
@@ -51,7 +51,7 @@ document.addEventListener('change',(e)=>{
         }else{
             GetAll({
                 url:`https://restcountries.eu/rest/v2/region/${e.target.value.toLowerCase()}`,
-                filter:true
+                filter:'true'
             })
         }
     }
