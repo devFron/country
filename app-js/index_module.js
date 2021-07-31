@@ -1,6 +1,7 @@
 import {header} from "./helpers/header.js";
 import { Form } from "./helpers/form.js";
 import { GetAll } from "./request.js";
+import { aCountry } from "./helpers/a_country.js";
 const $root = document.querySelector('#root')
 const $countries = document.createElement('section')
 $countries.classList.add('countries')
@@ -41,6 +42,9 @@ document.addEventListener('click',(e) =>{
             top:0,
             behavior:'smooth'
         })
+    }
+    if(e.target.matches('.country-box')){
+        aCountry(e.target)
     }
 })
 
