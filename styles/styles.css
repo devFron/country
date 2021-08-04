@@ -398,6 +398,16 @@ form select {
   cursor: pointer;
 }
 
+.see__country {
+  position: fixed;
+  top: 0rem;
+  background: white;
+  bottom: 0;
+  z-index: 999;
+  overflow: scroll;
+  display: none;
+}
+
 .a-country {
   background: transparent;
   padding: 1.25rem 1rem 1rem 1rem;
