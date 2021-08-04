@@ -40,4 +40,16 @@
             color:$color-six;
         }
     }
+    .a-country__dark{
+        background:$color-two;
+        color:$color-six;
+        .a-country__button__dark{
+            background:$color-two;
+            color:$color-six;
+        }
+        .border-countries__country__dark{
+            background:$color-two;
+            color:$color-six;
+        }
+    }
 }
