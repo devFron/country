@@ -2,6 +2,7 @@ import {header} from "./helpers/header.js";
 import { Form } from "./helpers/form.js";
 import { GetAll } from "./request.js";
 import { aCountry } from "./helpers/a_country.js";
+import {CheckDarkMode} from "./dark_mode.js"
 const $root = document.querySelector('#root')
 const $countries = document.createElement('section')
 $countries.classList.add('countries')
@@ -13,21 +14,22 @@ const $seeCountryBox = document.createElement('section')
 $seeCountryBox.classList.add('see__country')
 const $seeCountryTemplate = document.querySelector('#a-country-template').content
 let $clone = document.importNode($seeCountryTemplate,true)
-document.addEventListener('DOMContentLoaded',(e)=>{
+document.addEventListener('DOMContentLoaded',async(e)=>{
     $root.appendChild(header())
     $root.appendChild(Form())
     $root.appendChild($countries)
     $root.appendChild($upButton)
-    GetAll({
+    await GetAll({
         filter:'false'
     })
     $seeCountryBox.appendChild($clone)
     $root.appendChild($seeCountryBox)
+    CheckDarkMode()
 })
 
 document.addEventListener('submit',(e)=>{if(e.target.matches('form')){e.preventDefault()}})
 
-document.addEventListener('click',(e) =>{
+document.addEventListener('click',async(e) =>{
 
     if(e.target.matches('.search__icon')){
 
@@ -37,10 +39,11 @@ document.addEventListener('click',(e) =>{
             alert('please enter a valid country')
         }
 
-        GetAll({
+        await GetAll({
             url:`https://restcountries.eu/rest/v2/name/${nameOfCountry}`,
             filter:'true'
         })
+        CheckDarkMode()
     }
 
     if(e.target.matches('.up')|| e.target.matches('.up__icon')){
@@ -58,15 +61,16 @@ document.addEventListener('click',(e) =>{
     }
 })
 
-document.addEventListener('change',(e)=>{
+document.addEventListener('change',async(e)=>{
     if(e.target.matches('select')){
         if(e.target.value === 'Filter by Region'|| e.target.value === 'America'){
             return
         }else{
-            GetAll({
+            await GetAll({
                 url:`https://restcountries.eu/rest/v2/region/${e.target.value.toLowerCase()}`,
                 filter:'true'
             })
+            CheckDarkMode()
         }
     }
 })
