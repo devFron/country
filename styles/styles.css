@@ -504,6 +504,10 @@ form select {
   color: white;
 }
 
+.dark-mode__dark {
+  color: white;
+}
+
 .form__dark .search-box__dark {
   -webkit-box-shadow: 0 0 20px rgba(32, 32, 32, 0.973);
           box-shadow: 0 0 20px rgba(32, 32, 32, 0.973);
