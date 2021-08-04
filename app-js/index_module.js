@@ -59,6 +59,15 @@ document.addEventListener('click',async(e) =>{
     if(e.target.matches('.a-country__button')){
         $seeCountryBox.style.display='none'     
     }
+    if(e.target.matches('.dark-mode') ||e.target.matches('.dark-mode > *')){
+        let $body = document.querySelector('body')
+        $body.classList.toggle('body__dark')
+        if($body.classList.contains('body__dark')){
+            localStorage.setItem('dark-mode-country','true')
+        }else{
+            localStorage.setItem('dark-mode-country','false')
+        }
+    }
 })
 
 document.addEventListener('change',async(e)=>{
