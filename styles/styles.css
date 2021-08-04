@@ -268,6 +268,9 @@ header .dark-mode {
       -ms-flex-pack: justify;
           justify-content: space-between;
   cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
 }
 header .dark-mode__title {
   margin: 0;
@@ -557,5 +560,18 @@ form select {
   background: #2b3945;
   -webkit-box-shadow: 0 0 20px rgba(32, 32, 32, 0.973);
           box-shadow: 0 0 20px rgba(32, 32, 32, 0.973);
+  color: white;
+}
+
+.a-country__dark {
+  background: #202c37;
+  color: white;
+}
+.a-country__dark .a-country__button__dark {
+  background: #202c37;
+  color: white;
+}
+.a-country__dark .border-countries__country__dark {
+  background: #202c37;
   color: white;
 }
