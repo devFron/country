@@ -9,6 +9,10 @@ const $upButton = document.createElement('section')
 $upButton.classList.add('up')
 $upButton.innerHTML = `<i class="fas fa-arrow-up up__icon"></i>`
 $upButton.style.display = 'none'
+const $seeCountryBox = document.createElement('section')
+$seeCountryBox.classList.add('see__country')
+const $seeCountryTemplate = document.querySelector('#a-country-template').content
+let $clone = document.importNode($seeCountryTemplate,true)
 document.addEventListener('DOMContentLoaded',(e)=>{
     $root.appendChild(header())
     $root.appendChild(Form())
@@ -17,6 +21,8 @@ document.addEventListener('DOMContentLoaded',(e)=>{
     GetAll({
         filter:'false'
     })
+    $seeCountryBox.appendChild($clone)
+    $root.appendChild($seeCountryBox)
 })
 
 document.addEventListener('submit',(e)=>{if(e.target.matches('form')){e.preventDefault()}})
@@ -44,7 +50,11 @@ document.addEventListener('click',(e) =>{
         })
     }
     if(e.target.matches('.country-box')){
+        $seeCountryBox.style.display='block'     
         aCountry(e.target)
+    }
+    if(e.target.matches('.a-country__button')){
+        $seeCountryBox.style.display='none'     
     }
 })
 
