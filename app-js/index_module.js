@@ -2,7 +2,7 @@ import {header} from "./helpers/header.js";
 import { Form } from "./helpers/form.js";
 import { GetAll } from "./request.js";
 import { aCountry } from "./helpers/a_country.js";
-import {CheckDarkMode} from "./dark_mode.js"
+import {CheckDarkMode,ToggleDarkMode} from "./dark_mode.js"
 const $root = document.querySelector('#root')
 const $countries = document.createElement('section')
 $countries.classList.add('countries')
@@ -62,6 +62,7 @@ document.addEventListener('click',async(e) =>{
     if(e.target.matches('.dark-mode') ||e.target.matches('.dark-mode > *')){
         let $body = document.querySelector('body')
         $body.classList.toggle('body__dark')
+        ToggleDarkMode()
         if($body.classList.contains('body__dark')){
             localStorage.setItem('dark-mode-country','true')
         }else{
