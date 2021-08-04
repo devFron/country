@@ -193,3 +193,46 @@ form{
     }
 }
 @include dark-mode;
+
+@media screen and (min-width:500px){
+    .countries{
+        grid-template-columns: repeat(4,1fr);
+    }
+    form{
+        flex-direction:row;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 10px;
+        .search-box{
+            margin:0;
+        }
+    }
+    .see__country{
+        right: 0;
+        left:0;
+        top:0;
+        bottom:0;
+        overflow: hidden;
+    }
+    .only-country-box{
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap:1rem;
+    }
+    .border-countries{
+        display:flex;
+        align-items: center;
+        .border-countries__title{
+            padding-right: 1rem;
+        }
+    }
+    .border-countries__box{
+        width: 200px;
+        
+    }
+    .data-lists{
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap:10px;
+    }
+}
