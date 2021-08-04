@@ -3,6 +3,7 @@ export const CheckDarkMode = ()=>{
         document.querySelector('body').classList.add('body__dark')
         document.querySelector('header').classList.add('header__dark')
         document.querySelector('.header__title').classList.add('header__title__dark')
+        document.querySelector('.dark-mode').classList.add('dark-mode__dark')
         document.querySelector('form').classList.add('form__dark')
         document.querySelector('.search-box').classList.add('search-box__dark')
         document.querySelector('.search').classList.add('search__dark')
@@ -18,6 +19,7 @@ export const CheckDarkMode = ()=>{
         document.querySelector('body').classList.remove('body__dark')
         document.querySelector('header').classList.remove('header__dark')
         document.querySelector('.header__title').classList.remove('header__title__dark')
+        document.querySelector('.dark-mode').classList.remove('dark-mode__dark')
         document.querySelector('form').classList.remove('form__dark')
         document.querySelector('.search-box').classList.remove('search-box__dark')
         document.querySelector('.search').classList.remove('search__dark')
@@ -33,3 +35,19 @@ export const CheckDarkMode = ()=>{
     }
 }
 
+export const ToggleDarkMode = ()=>{
+    document.querySelector('header').classList.toggle('header__dark')
+    document.querySelector('.header__title').classList.toggle('header__title__dark')
+    document.querySelector('.dark-mode').classList.toggle('dark-mode__dark')
+    document.querySelector('form').classList.toggle('form__dark')
+    document.querySelector('.search-box').classList.toggle('search-box__dark')
+    document.querySelector('.search').classList.toggle('search__dark')
+    document.querySelector('.countries').classList.toggle('countries__dark')
+    document.querySelectorAll('.country').forEach((el)=>{
+        el.classList.toggle('country__dark')
+    })
+    document.querySelector('.country-box').classList.toggle('countries__dark')
+    document.querySelector('.a-country').classList.toggle('a-country__dark')
+    document.querySelector('.a-country__button').classList.toggle('a-country__button__dark')
+    document.querySelector('.border-countries__country').classList.toggle('border-countries__country__dark')
+}
