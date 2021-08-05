@@ -580,6 +580,10 @@ form select {
   color: white;
 }
 
+.see__country__dark {
+  background: #202c37;
+}
+
 @media screen and (min-width: 500px) {
   .countries {
     -ms-grid-columns: 1fr 2rem 1fr 2rem 1fr 2rem 1fr;
