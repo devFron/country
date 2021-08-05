@@ -349,6 +349,10 @@ form select {
   grid-gap: 2rem;
   padding: 0 1rem 10rem 1rem;
 }
+.countries .loader {
+  position: absolute;
+  left: 50%;
+}
 .countries .country-box {
   cursor: pointer;
   background: transparent;
