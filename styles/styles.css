@@ -347,7 +347,7 @@ form select {
   display: -ms-grid;
   display: grid;
   grid-gap: 2rem;
-  padding: 0 1rem;
+  padding: 0 1rem 10rem 1rem;
 }
 .countries .country-box {
   cursor: pointer;
