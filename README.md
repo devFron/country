@@ -1,0 +1,3 @@
+# REST Countries API with color theme switcher
+this challenge belongs to [frontend Mentor](www.frontendmentor.io)
+As I progressed with the project I encountered some obstacles but I have solved them and I feel very proud that I realize how much I have progressed in this wonderful world of the web as JonMirCha says, [frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca) has classified this challenge as advanced and I think that feeds my ego a bit I do not want to feel like a superman but I am willing to overcome all the challenges that they propose to me if you want to know what they are and how I have solved these obstacles, you can see them [here](https://devfron.github.io)
