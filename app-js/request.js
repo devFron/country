@@ -1,3 +1,4 @@
+import { CheckDarkMode } from "./dark_mode.js";
 export const GetAll = async(filterData)=>{
     let{url,filter} = filterData
 
@@ -66,6 +67,7 @@ export const GetAll = async(filterData)=>{
                         }else{
                             CounterFilter(i)
                             i++
+                            CheckDarkMode()
                         }
                     }
                 }
