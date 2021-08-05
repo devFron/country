@@ -586,6 +586,10 @@ form select {
     grid-template-columns: repeat(4, 1fr);
   }
 
+  .country__image {
+    height: 150px;
+  }
+
   form {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
