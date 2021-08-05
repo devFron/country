@@ -1,6 +1,7 @@
 export const CheckDarkMode = ()=>{
     if(localStorage.getItem('dark-mode-country')==='true'){
         document.querySelector('body').classList.add('body__dark')
+        document.querySelector('.see__country').classList.add('see__country__dark')
         document.querySelector('header').classList.add('header__dark')
         document.querySelector('.header__title').classList.add('header__title__dark')
         document.querySelector('.dark-mode').classList.add('dark-mode__dark')
@@ -17,6 +18,7 @@ export const CheckDarkMode = ()=>{
         document.querySelector('.border-countries__country').classList.add('border-countries__country__dark')
     }else{
         document.querySelector('body').classList.remove('body__dark')
+        document.querySelector('.see__country').classList.remove('see__country__dark')
         document.querySelector('header').classList.remove('header__dark')
         document.querySelector('.header__title').classList.remove('header__title__dark')
         document.querySelector('.dark-mode').classList.remove('dark-mode__dark')
@@ -37,6 +39,7 @@ export const CheckDarkMode = ()=>{
 
 export const ToggleDarkMode = ()=>{
     document.querySelector('header').classList.toggle('header__dark')
+    document.querySelector('.see__country').classList.toggle('see__country__dark')
     document.querySelector('.header__title').classList.toggle('header__title__dark')
     document.querySelector('.dark-mode').classList.toggle('dark-mode__dark')
     document.querySelector('form').classList.toggle('form__dark')
