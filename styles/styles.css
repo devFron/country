@@ -655,3 +655,8 @@ form select {
     grid-gap: 10px;
   }
 }
+@media screen and (min-width: 1440px) {
+  body {
+    padding: 0 2rem;
+  }
+}
