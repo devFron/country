@@ -3,8 +3,7 @@ export const GetAll = async(filterData)=>{
     let{url,filter} = filterData
 
     const $countriesBox = document.querySelector('.countries')
-    $countriesBox.innerHTML=``
-
+    $countriesBox.innerHTML=`<img src="assets/ball-triangle.svg" alt="" class="loader">`
     const InsertCountries = countries =>{
         countries.forEach(el=> {
             $countriesBox.innerHTML +=`
@@ -31,6 +30,7 @@ export const GetAll = async(filterData)=>{
             </section>
             `
         });
+        document.querySelector('.loader').style.display = 'none'
     }     
 
     localStorage.setItem('filterKey',filter)
